@@ -32,7 +32,7 @@ namespace SmartGroceryList2._0.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Product> Products { get; set; }
+        //public DbSet<Product> Products { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
