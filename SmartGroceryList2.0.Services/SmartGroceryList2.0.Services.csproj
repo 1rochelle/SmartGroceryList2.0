@@ -55,10 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartGroceryList2.0.Data\SmartGroceryList2.0.Data.csproj">
+      <Project>{c7434143-cb76-461a-8668-aec2c5f82c58}</Project>
+      <Name>SmartGroceryList2.0.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartGroceryList2.0.Models\SmartGroceryList2.0.Models.csproj">
+      <Project>{150cda3c-465d-4ba1-9a27-ecb3d1fa29bf}</Project>
+      <Name>SmartGroceryList2.0.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
