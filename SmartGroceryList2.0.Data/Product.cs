@@ -12,6 +12,7 @@ namespace SmartGroceryList2._0.Data
     public class Product
     {
         public enum Department { Grocery, Household, PersonalCare, Other }
+        public virtual ProductAvailability ProductAvailability {get; set;}
 
         [Key]
         public Guid ItemId { get; set; }
@@ -24,7 +25,7 @@ namespace SmartGroceryList2._0.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
 
-        public List<Product> MultiplePurchasesOfItem = new List<Product>();
+        //public List<Product> MultiplePurchasesOfItem = new List<Product>();
 
         public int ItemCount { get; set; }
 
@@ -34,10 +35,6 @@ namespace SmartGroceryList2._0.Data
         public enum ItemType { Refrigerated, Frozen, Produce, DryGoods, Household, PersonalCare }
 
         // Foreign Keys here
-        [Required]
-        [ForeignKey(nameof(UserName))]
-        public Guid UserId { get; set; }
-        public virtual User UserName { get; set; }
 
         [Required]
         [ForeignKey(nameof(StoreName))]
