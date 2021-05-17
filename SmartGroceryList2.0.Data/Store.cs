@@ -20,7 +20,7 @@ namespace SmartGroceryList2._0.Data
         public string StoreName { get; set; }
 
         [Required]
-        public int StoreAddressNumber { get; set; }
+        public string StoreAddressNumber { get; set; }
 
         [Required]
         public string StoreStreetName { get; set; }

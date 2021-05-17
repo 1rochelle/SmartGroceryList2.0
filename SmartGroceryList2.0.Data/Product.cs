@@ -19,7 +19,7 @@ namespace SmartGroceryList2._0.Data
         [Key]
         public int Id { get; set; }
 
-        public Guid ItemId { get; set; }
+        public Guid OwnerId { get; set; }
 
         [Required]
         [MinLength(3, ErrorMessage = "There are not enough characters in this field.")]
@@ -28,6 +28,9 @@ namespace SmartGroceryList2._0.Data
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
+
+        // Terry, I added this:
+        public DateTimeOffset ModifiedUtc { get; set; }
 
         //public List<Product> MultiplePurchasesOfItem = new List<Product>();
 
