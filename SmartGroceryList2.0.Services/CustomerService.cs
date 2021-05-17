@@ -60,5 +60,67 @@ namespace SmartGroceryList2._0.Services
                 return query.ToArray();
             }
         }
+
+        public CustomerDetail GetCustomerById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var customer =
+                    ctx
+                        .Customers
+                        .Where(c => c.OwnerId == _userId)
+                        .SingleOrDefault(c => c.CustomerId == id);
+
+                return new CustomerDetail
+                {
+                    CustomerId = customer.CustomerId,
+                    FirstName = customer.FirstName,
+                    LastName = customer.LastName,                   
+                    ProductId = customer.ProductId
+                };
+            }
+        }
+
+        public bool UpdateCustomer(CustomerEdit customerEdit)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var customer =
+                    ctx
+                        .Customers
+                        .Where(c => c.OwnerId == _userId)
+                        .SingleOrDefault(c => c.CustomerId == customerEdit.CustomerId);
+                if (customer == null)
+                {
+                    return false;
+                }
+
+                customer.CustomerId = customerEdit.CustomerId;
+                customer.FirstName = customerEdit.FirstName;
+                customer.LastName = customerEdit.LastName;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteCustomer(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var customer =
+                    ctx
+                        .Customers
+                        .Where(c => c.OwnerId == _userId)
+                        .SingleOrDefault(c => c.CustomerId == id);
+                if (customer == null)
+                {
+                    return false;
+                }
+
+                ctx.Customers.Remove(customer);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

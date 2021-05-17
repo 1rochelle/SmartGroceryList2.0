@@ -13,7 +13,7 @@ namespace SmartGroceryList2._0.Models
 
         public string StoreName { get; set; }
 
-        public int StoreAddressNumber { get; set; }
+        public string StoreAddressNumber { get; set; }
 
         public string StoreStreetName { get; set; }
 

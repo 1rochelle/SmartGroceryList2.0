@@ -8,6 +8,8 @@ namespace SmartGroceryList2._0.Models
 {
     public class CustomerEdit
     {
+        public int CustomerId { get; set; }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
