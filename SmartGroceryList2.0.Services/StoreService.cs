@@ -23,7 +23,6 @@ namespace SmartGroceryList2._0.Services
                 new Store()
                 {
                     OwnerId = _userId,
-                    StoreId = model.StoreId,
                     StoreName = model.StoreName,
                     StoreAddressNumber = model.StoreAddressNumber,
                     StoreStreetName = model.StoreStreetName,

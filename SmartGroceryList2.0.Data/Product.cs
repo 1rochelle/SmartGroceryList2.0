@@ -9,12 +9,16 @@ using System.Threading.Tasks;
 
 namespace SmartGroceryList2._0.Data
 {
-    public class Product
+    public enum ItemType { Refrigerated, Frozen, Produce, DryGoods, Household, PersonalCare }
+    public enum Department { Grocery, Household, PersonalCare, Other }
+    public class Product : ProductAvailability
     {
-        public enum Department { Grocery, Household, PersonalCare, Other }
-        public virtual ProductAvailability ProductAvailability {get; set;}
+        public Department DepartmentType { get; set; }
+        
 
         [Key]
+        public int Id { get; set; }
+
         public Guid ItemId { get; set; }
 
         [Required]
@@ -32,13 +36,17 @@ namespace SmartGroceryList2._0.Data
         [DefaultValue(false)]
         public bool PurchasedAtMultipleStores { get; set; }
 
-        public enum ItemType { Refrigerated, Frozen, Produce, DryGoods, Household, PersonalCare }
+        public ItemType ItemType { get; set; }
 
         // Foreign Keys here
 
         [Required]
-        [ForeignKey(nameof(StoreName))]
+        [ForeignKey(nameof(Store))]
         public int StoreId { get; set; }
-        public virtual Store StoreName { get; set; }
+        public  Store Store { get; set; }
+
+        public virtual List<Customer> Customers { get; set; } = new List<Customer>();
+
+        public virtual List<ShoppingList> Carts { get; set; } = new List<ShoppingList>();
     }
 }

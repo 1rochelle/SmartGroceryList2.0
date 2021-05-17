@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartGroceryList2._0.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,15 +11,10 @@ namespace SmartGroceryList2._0.Data
 {
     public class ProductAvailability
     {
-        
-        [Key, ForeignKey(nameof(ItemName))]
-        public Guid ItemId { get; set; }
-        public virtual Product ItemName { get; set; }
-
         public bool ItemIsCarriedByStore { get; set; }
 
         public bool ItemIsOutOfStock { get; set; }
 
-        public enum Quality { Damaged, Overpriced, Poor }
+        public Quality QualityType { get; set; }
     }
 }

@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace SmartGroceryList2._0.Data
 {
+    public enum StoreState { AL, AK, AS, AZ, AR, CA, CO, CT, DE, DC, FL, GA, GU, HI, ID, IL, IN, IA, KS, KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, MP, OH, OK, OR, PA, PR, RI, SC, SD, TN, TX, UT, VT, VA, VI, WA, WV, WI, WY }
     public class Store
     {
         [Key]
         public int StoreId { get; set; }
+        public Guid OwnerId { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "There are not enough characters in this field.")]
@@ -26,7 +28,8 @@ namespace SmartGroceryList2._0.Data
         [Required]
         public string StoreTownOrCity { get; set; }
 
-        public enum StoreState { AL, AK, AS, AZ, AR, CA, CO, CT, DE, DC, FL, GA, GU, HI, ID, IL, IN, IA, KS, KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, MP, OH, OK, OR, PA, PR, RI, SC, SD, TN, TX, UT, VT, VA, VI, WA, WV, WI, WY }
+        [Required]
+        public StoreState StoreState { get; set; }
 
         [Required]
         public int StoreZIP { get; set; }

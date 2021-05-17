@@ -8,29 +8,51 @@ namespace SmartGroceryList2._0.Data.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.ProductAvailability",
+                "dbo.Customer",
                 c => new
                     {
-                        ItemId = c.Guid(nullable: false),
-                        ItemIsCarriedByStore = c.Boolean(nullable: false),
-                        ItemIsOutOfStock = c.Boolean(nullable: false),
+                        CustomerId = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        OwnerId = c.Guid(nullable: false),
+                        ProductId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.ItemId)
-                .ForeignKey("dbo.Product", t => t.ItemId)
-                .Index(t => t.ItemId);
+                .PrimaryKey(t => t.CustomerId)
+                .ForeignKey("dbo.Product", t => t.ProductId, cascadeDelete: true)
+                .Index(t => t.ProductId);
+            
+            CreateTable(
+                "dbo.ShoppingList",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        CustomerId = c.Int(),
+                        ProductId = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Customer", t => t.CustomerId)
+                .ForeignKey("dbo.Product", t => t.ProductId)
+                .Index(t => t.CustomerId)
+                .Index(t => t.ProductId);
             
             CreateTable(
                 "dbo.Product",
                 c => new
                     {
+                        Id = c.Int(nullable: false, identity: true),
+                        DepartmentType = c.Int(nullable: false),
                         ItemId = c.Guid(nullable: false),
                         ItemName = c.String(nullable: false, maxLength: 20),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         ItemCount = c.Int(nullable: false),
                         PurchasedAtMultipleStores = c.Boolean(nullable: false),
+                        ItemType = c.Int(nullable: false),
                         StoreId = c.Int(nullable: false),
+                        ItemIsCarriedByStore = c.Boolean(nullable: false),
+                        ItemIsOutOfStock = c.Boolean(nullable: false),
+                        QualityType = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.ItemId)
+                .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Store", t => t.StoreId, cascadeDelete: true)
                 .Index(t => t.StoreId);
             
@@ -39,10 +61,12 @@ namespace SmartGroceryList2._0.Data.Migrations
                 c => new
                     {
                         StoreId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
                         StoreName = c.String(nullable: false, maxLength: 20),
                         StoreAddressNumber = c.Int(nullable: false),
                         StoreStreetName = c.String(nullable: false),
                         StoreTownOrCity = c.String(nullable: false),
+                        StoreState = c.Int(nullable: false),
                         StoreZIP = c.Int(nullable: false),
                         Store_StoreId = c.Int(),
                     })
@@ -129,16 +153,20 @@ namespace SmartGroceryList2._0.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.ProductAvailability", "ItemId", "dbo.Product");
+            DropForeignKey("dbo.Customer", "ProductId", "dbo.Product");
+            DropForeignKey("dbo.ShoppingList", "ProductId", "dbo.Product");
             DropForeignKey("dbo.Product", "StoreId", "dbo.Store");
             DropForeignKey("dbo.Store", "Store_StoreId", "dbo.Store");
+            DropForeignKey("dbo.ShoppingList", "CustomerId", "dbo.Customer");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
             DropIndex("dbo.Store", new[] { "Store_StoreId" });
             DropIndex("dbo.Product", new[] { "StoreId" });
-            DropIndex("dbo.ProductAvailability", new[] { "ItemId" });
+            DropIndex("dbo.ShoppingList", new[] { "ProductId" });
+            DropIndex("dbo.ShoppingList", new[] { "CustomerId" });
+            DropIndex("dbo.Customer", new[] { "ProductId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
@@ -146,7 +174,8 @@ namespace SmartGroceryList2._0.Data.Migrations
             DropTable("dbo.IdentityRole");
             DropTable("dbo.Store");
             DropTable("dbo.Product");
-            DropTable("dbo.ProductAvailability");
+            DropTable("dbo.ShoppingList");
+            DropTable("dbo.Customer");
         }
     }
 }

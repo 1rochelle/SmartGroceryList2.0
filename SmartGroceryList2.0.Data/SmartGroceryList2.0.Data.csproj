@@ -54,12 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202105150053287_InitialMigration.cs" />
-    <Compile Include="Migrations\202105150053287_InitialMigration.Designer.cs">
-      <DependentUpon>202105150053287_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202105171538239_InitialMigration.cs" />
+    <Compile Include="Migrations\202105171538239_InitialMigration.Designer.cs">
+      <DependentUpon>202105171538239_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ShoppingList.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Enums\Quality.cs" />
+    <Compile Include="IdentityModels.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductAvailability.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +73,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105150053287_InitialMigration.resx">
-      <DependentUpon>202105150053287_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105171538239_InitialMigration.resx">
+      <DependentUpon>202105171538239_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

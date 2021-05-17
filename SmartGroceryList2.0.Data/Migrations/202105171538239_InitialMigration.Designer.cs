@@ -13,7 +13,7 @@ namespace SmartGroceryList2._0.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202105150053287_InitialMigration"; }
+            get { return "202105171538239_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

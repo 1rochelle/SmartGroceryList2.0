@@ -10,6 +10,7 @@ namespace SmartGroceryList2._0.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            
         }
 
         protected override void Seed(SmartGroceryList2._0.Data.ApplicationDbContext context)
