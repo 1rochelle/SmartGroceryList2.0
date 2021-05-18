@@ -50,7 +50,6 @@ namespace SmartGroceryList2._0.Services
                                     // Terry, I don't need FirstName and LastName since I have CustomerName, right?
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
-                                    CustomerName = e.CustomerName,
                                     ProductId = e.ProductId,
                                     Product = e.Product,
                                     Lists = e.Lists

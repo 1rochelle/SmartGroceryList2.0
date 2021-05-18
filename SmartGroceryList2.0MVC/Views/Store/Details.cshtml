@@ -1,0 +1,66 @@
+﻿@model SmartGroceryList2._0.Models.StoreDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StoreDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreAddressNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreAddressNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreStreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreStreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreTownOrCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreTownOrCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreZIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreZIP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StoreId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,72 @@
+﻿@model SmartGroceryList2._0.Models.StoreDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StoreDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreAddressNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreAddressNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreStreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreStreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreTownOrCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreTownOrCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreZIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreZIP)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

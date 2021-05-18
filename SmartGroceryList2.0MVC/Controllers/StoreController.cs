@@ -31,15 +31,97 @@ namespace SmartGroceryList2._0MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(StoreCreate model)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) return View(model);
+
+            var service = CreateStoreService();
+
+            if (service.CreateStore(model))
             {
+                TempData["SaveResult"] = "Your note was created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Note could not be created.");
+            return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateStoreService();
+            var model = svc.GetStoreById(id);
+
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateStoreService();
+            var detail = service.GetStoreById(id);
+            var model =
+                new StoreEdit
+                {
+                    StoreId = detail.StoreId,
+                    StoreName = detail.StoreName,
+                    StoreAddressNumber = detail.StoreAddressNumber,
+                    StoreStreetName = detail.StoreStreetName,
+                    StoreTownOrCity = detail.StoreTownOrCity,
+                    StoreState = detail.StoreState,
+                    StoreZIP = detail.StoreZIP
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, StoreEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.StoreId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
+
+            var service = CreateStoreService();
+
+            if (service.UpdateStore(model))
+            {
+                TempData["SaveResult"] = "The store was updated.";
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "The store could not be updated.");
+            return View(model);
+        }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateStoreService();
+            var model = svc.GetStoreById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateStoreService();
+
+            service.DeleteStore(id);
+
+            TempData["SaveResult"] = "The store was deleted.";
+
+            return RedirectToAction("Index");
+        }
+
+        private StoreService CreateStoreService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new StoreService(userId);
-
-            service.CreateStore(model);
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }
