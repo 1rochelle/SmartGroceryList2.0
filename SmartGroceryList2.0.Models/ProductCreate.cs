@@ -21,6 +21,8 @@ namespace SmartGroceryList2._0.Models
 
         public DateTimeOffset CreatedUtc { get; set; }
 
+        public int StoreId { get; set; }
+
         public int ItemCount { get; set; }
     }
 }

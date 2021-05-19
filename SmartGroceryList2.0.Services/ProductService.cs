@@ -23,6 +23,7 @@ namespace SmartGroceryList2._0.Services
                 new Product()
                 {
                     OwnerId = _userId,
+                    StoreId = model.StoreId,
                     ItemName = model.ItemName,
                     DepartmentType = model.DepartmentType,
                     ItemType = model.ItemType,
@@ -73,8 +74,8 @@ namespace SmartGroceryList2._0.Services
                 {
                     Id = product.Id,
                     ItemName = product.ItemName,
-                    DepartmentType = product.DepartmentType.ToString(),
-                    ItemType = product.ItemType.ToString(),
+                    DepartmentType = product.DepartmentType,
+                    ItemType = product.ItemType,
                     CreatedUtc = product.CreatedUtc,
                     StoreId = product.StoreId,
                     PurchasedAtMultipleStores = product.PurchasedAtMultipleStores,

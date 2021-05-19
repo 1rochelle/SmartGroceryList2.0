@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace SmartGroceryList2._0.Data
     public enum Department { Grocery, Household, PersonalCare, Other }
     public class Product : ProductAvailability
     {
+        
         public Department DepartmentType { get; set; }
         
 
@@ -40,6 +42,7 @@ namespace SmartGroceryList2._0.Data
         public bool PurchasedAtMultipleStores { get; set; }
 
         public ItemType ItemType { get; set; }
+        
 
         // Foreign Keys here
 

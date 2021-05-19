@@ -17,9 +17,9 @@ namespace SmartGroceryList2._0.Models
 
         public int ItemCount { get; set; }     
 
-        public string DepartmentType { get; set; }
+        public Department DepartmentType { get; set; }
 
-        public string ItemType { get; set; }
+        public ItemType ItemType { get; set; }
 
         public DateTimeOffset CreatedUtc { get; set; }
 
