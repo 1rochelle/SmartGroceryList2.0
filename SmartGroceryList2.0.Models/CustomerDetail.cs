@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartGroceryList2._0.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,8 @@ namespace SmartGroceryList2._0.Models
 
         public Guid OwnerId { get; set; }
 
-        public int ProductId { get; set; }
- 
+        //public int ProductId { get; set; }
+        public virtual List<Cart> CartItems { get; set; } = new List<Cart>();
+
     }
 }

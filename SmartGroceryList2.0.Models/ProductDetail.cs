@@ -23,8 +23,6 @@ namespace SmartGroceryList2._0.Models
 
         public DateTimeOffset CreatedUtc { get; set; }
 
-        // Terry, I could have more than one StoreId here, right? How do I address this?
-        // Also, why doesn't the GUID belong hee in Detail?
         public int StoreId { get; set; }
 
         [DefaultValue(false)]

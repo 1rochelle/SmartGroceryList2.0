@@ -62,7 +62,16 @@
     <Compile Include="Migrations\202105181424490_SecondMigration.Designer.cs">
       <DependentUpon>202105181424490_SecondMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105192056046_ThirdMigration.cs" />
+    <Compile Include="Migrations\202105192056046_ThirdMigration.Designer.cs">
+      <DependentUpon>202105192056046_ThirdMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105192059115_FourthMigration.cs" />
+    <Compile Include="Migrations\202105192059115_FourthMigration.Designer.cs">
+      <DependentUpon>202105192059115_FourthMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Cart.cs" />
     <Compile Include="ShoppingList.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Enums\Quality.cs" />
@@ -82,6 +91,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105181424490_SecondMigration.resx">
       <DependentUpon>202105181424490_SecondMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105192056046_ThirdMigration.resx">
+      <DependentUpon>202105192056046_ThirdMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105192059115_FourthMigration.resx">
+      <DependentUpon>202105192059115_FourthMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -28,6 +28,8 @@ namespace SmartGroceryList2._0.Data
         [MaxLength(20, ErrorMessage = "There are too many characters in this field.")]
         public string ItemName { get; set; }
 
+        public decimal Price { get; set; }
+
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
 
@@ -37,6 +39,9 @@ namespace SmartGroceryList2._0.Data
         //public List<Product> MultiplePurchasesOfItem = new List<Product>();
 
         public int ItemCount { get; set; }
+
+        // At time of purchase, we'll increment by 1
+        public int TimesPurchased { get; set; }
 
         [DefaultValue(false)]
         public bool PurchasedAtMultipleStores { get; set; }
