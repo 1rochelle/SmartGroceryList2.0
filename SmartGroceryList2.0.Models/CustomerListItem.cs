@@ -15,14 +15,7 @@ namespace SmartGroceryList2._0.Models
 
         public string LastName { get; set; }
 
-        public string CustomerName { get { return $"{FirstName} {LastName}"; } }
-
-        public Guid OwnerId { get; set; }
-
-        public int ProductId { get; set; }
-
-        public virtual Product Product { get; set; }
-
-        public virtual List<ShoppingList> Lists { get; set; } = new List<ShoppingList>();
+        public DateTimeOffset PurchaseDate { get; set; }
+      
     }
 }

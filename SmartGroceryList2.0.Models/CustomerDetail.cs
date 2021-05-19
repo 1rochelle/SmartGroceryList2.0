@@ -19,8 +19,11 @@ namespace SmartGroceryList2._0.Models
 
         public Guid OwnerId { get; set; }
 
-        //public int ProductId { get; set; }
+        public virtual List<ShoppingList> Lists { get; set; } = new List<ShoppingList>();
+
         public virtual List<Cart> CartItems { get; set; } = new List<Cart>();
+
+        public DateTimeOffset PurchaseDate { get; set; }
 
     }
 }

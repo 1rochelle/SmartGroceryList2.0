@@ -47,10 +47,11 @@ namespace SmartGroceryList2._0.Services
                                 new CustomerListItem
                                 {
                                     CustomerId = e.CustomerId,
-                                    // Terry, I don't need FirstName and LastName since I have CustomerName, right?
+                                    // Terry, I don't need FirstName and LastName since I have CustomerName, with string interpolation.
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
-                                    Lists = e.Lists
+                                    PurchaseDate = e.PurchaseDate
+                                    //OwnerId = e.OwnerId
                                 }
                        );
 
@@ -72,7 +73,8 @@ namespace SmartGroceryList2._0.Services
                 {
                     CustomerId = customer.CustomerId,
                     FirstName = customer.FirstName,
-                    LastName = customer.LastName
+                    LastName = customer.LastName,
+                    PurchaseDate = customer.PurchaseDate
                 };
             }
         }

@@ -12,11 +12,17 @@ namespace SmartGroceryList2._0.Data
     {
         [Key]
         public int CustomerId { get; set; }
+
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
+
         public string CustomerName { get { return $"{FirstName} {LastName}"; } }
+
         public Guid OwnerId { get; set; }
+
         public virtual List<ShoppingList> Lists { get; set; } = new List<ShoppingList>();
+
         public virtual List<Cart> CartItems { get; set; } = new List<Cart>();
 
         public DateTimeOffset PurchaseDate { get; set; }
