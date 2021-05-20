@@ -13,6 +13,8 @@ namespace SmartGroceryList2._0.Data
         [Key]
         public int Id { get; set; }
 
+        public Guid OwnerId { get; set; }
+
         [ForeignKey(nameof(Customer))]
         public int? CustomerId { get; set; }
 
