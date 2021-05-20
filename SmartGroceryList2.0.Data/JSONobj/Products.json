@@ -1,0 +1,389 @@
+[
+  {
+    "ItemName": "Bagged salad",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 3,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Cheerios",
+    "DepartmentType": 0,
+    "ItemType": 3,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Pledge",
+    "DepartmentType": 1,
+    "ItemType": 4,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Cat litter",
+    "DepartmentType": 1,
+    "ItemType": 4,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Skim milk",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 2,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Half & Half",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bag of lemons",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bag of oranges",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Toilet paper",
+    "DepartmentType": 1,
+    "ItemType": 4,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ground beef",
+    "DepartmentType": 0,
+    "ItemType": 1,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ice cream",
+    "DepartmentType": 0,
+    "ItemType": 1,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Yogurt dressing",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Toothpaste",
+    "DepartmentType": 2,
+    "ItemType": 5,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/21/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bagged salad",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 3,
+    "CreatedUtc": "4/28/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Skim milk",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 2,
+    "CreatedUtc": "4/28/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Half & half",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "4/28/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ground beef",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "4/28/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ice cream",
+    "DepartmentType": 0,
+    "ItemType": 1,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "4/28/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bagged salad",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 3,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Cheerios",
+    "DepartmentType": 0,
+    "ItemType": 3,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Skim milk",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 2,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Half & half",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bag of oranges",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ground beef",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ice cream",
+    "DepartmentType": 0,
+    "ItemType": 1,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Yogurt dressing",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/5/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bagged salad",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 3,
+    "CreatedUtc": "5/12/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Skim milk",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 2,
+    "CreatedUtc": "5/12/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Half & half",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/12/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ground beef",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/12/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ice cream",
+    "DepartmentType": 0,
+    "ItemType": 1,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/12/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bagged salad",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 3,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Cheerios",
+    "DepartmentType": 0,
+    "ItemType": 3,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Pledge",
+    "DepartmentType": 1,
+    "ItemType": 4,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Cat litter",
+    "DepartmentType": 1,
+    "ItemType": 4,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Skim milk",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 2,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Half & half",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bag of lemons",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Bag of oranges",
+    "DepartmentType": 0,
+    "ItemType": 2,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Toilet paper",
+    "DepartmentType": 1,
+    "ItemType": 4,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ground beef",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 2,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Ice cream",
+    "DepartmentType": 0,
+    "ItemType": 1,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  },
+  {
+    "ItemName": "Yogurt dressing",
+    "DepartmentType": 0,
+    "ItemType": 0,
+    "StoreId": 3,
+    "ItemCount": 1,
+    "CreatedUtc": "5/19/2021 2:00:12 PM -05:00",
+    "OwnerId": "2daa691b-4ec1-49cf-ad1f-323827385e51"
+  }
+]

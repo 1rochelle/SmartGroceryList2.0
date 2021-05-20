@@ -1,8 +1,11 @@
 namespace SmartGroceryList2._0.Data.Migrations
 {
+    using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.IO;
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<SmartGroceryList2._0.Data.ApplicationDbContext>
@@ -27,6 +30,9 @@ namespace SmartGroceryList2._0.Data.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            string content = File.ReadAllText(@"C:\Users\rdeulley\source\repos\SmartGroceryList2.0\SmartGroceryList2.0.Data\JSONobj\Products.json");
+            List<Product> Products = JsonConvert.DeserializeObject<List<Product>>(content);
+            context.Products.AddOrUpdate(p => p.Id, Products.ToArray());
         }
     }
 }
