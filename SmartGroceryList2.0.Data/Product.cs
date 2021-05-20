@@ -14,7 +14,7 @@ namespace SmartGroceryList2._0.Data
     public enum Department { Grocery, Household, PersonalCare, Other }
     public class Product : ProductAvailability
     {
-        
+        [Range(0,3)]
         public Department DepartmentType { get; set; }
         
 
@@ -28,7 +28,7 @@ namespace SmartGroceryList2._0.Data
         [MaxLength(20, ErrorMessage = "There are too many characters in this field.")]
         public string ItemName { get; set; }
 
-        public decimal Price { get; set; }
+        //public decimal Price { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
@@ -46,6 +46,7 @@ namespace SmartGroceryList2._0.Data
         [DefaultValue(false)]
         public bool PurchasedAtMultipleStores { get; set; }
 
+        [Range(0,5)]
         public ItemType ItemType { get; set; }
         
 

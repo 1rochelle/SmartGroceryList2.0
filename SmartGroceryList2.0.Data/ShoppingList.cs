@@ -22,6 +22,5 @@ namespace SmartGroceryList2._0.Data
         public int? ProductId { get; set; }
 
         public virtual Product Product { get; set; }
-
     }
 }

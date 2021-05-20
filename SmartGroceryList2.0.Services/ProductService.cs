@@ -60,6 +60,30 @@ namespace SmartGroceryList2._0.Services
             }
         }
 
+        public IEnumerable<ProductListItem> GetItemsToTrack()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Products
+                        .Where(e => e.OwnerId == _userId && e.DepartmentType != (Department)3)
+                        .Select(
+                            e =>
+                                new ProductListItem
+                                {
+                                    Id = e.Id,
+                                    ItemName = e.ItemName,
+                                    CreatedUtc = e.CreatedUtc
+                                }
+                        );
+
+                return query.ToArray();
+            }
+        }
+
+
+
         public ProductDetail GetProductById(int id)
         {
             using (var ctx = new ApplicationDbContext())
