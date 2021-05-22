@@ -10,6 +10,8 @@ namespace SmartGroceryList2._0.Models
     {
         public int Id { get; set; }
 
-        public int CustomerId { get; set; }
+        public int? CustomerId { get; set; }
+
+        public int? ProductId { get; set; }
     }
 }
