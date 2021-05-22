@@ -34,8 +34,8 @@ namespace SmartGroceryList2._0.Services
             List<string> IceCream = new List<string>();
             List<string> YogurtDressing = new List<string>();
 
-            //each instance of CreatedUTC in a list 
-            DateTimeOffset BaggedSaladPurchased = new DateTimeOffset();
+            //earliest instance of CreatedUTC for each item
+            List<DateTimeOffset> BaggedSaladPurchased = new List<DateTimeOffset>();
             DateTimeOffset CheeriosPurchased = new DateTimeOffset();
             DateTimeOffset PledgePurchased = new DateTimeOffset();
             DateTimeOffset CatLitterPurchased = new DateTimeOffset();
@@ -48,6 +48,11 @@ namespace SmartGroceryList2._0.Services
             DateTimeOffset IceCreamPurchased = new DateTimeOffset();
             DateTimeOffset YogurtDressingPurchased = new DateTimeOffset();
 
+            //Counting the amount of items in each list
+            int BaggedSaladCount = 0;
+
+            DateTimeOffset today = DateTimeOffset.Now;
+
             //using (var ProductDb = new ApplicationDbContext()) { };
             foreach (Product EachItem in db.Products)
             {
@@ -55,10 +60,44 @@ namespace SmartGroceryList2._0.Services
                 switch (ProductName.ToLower())
                 {
                     case "baggedsalad":
-                        BaggedSalad.Add(ProductName);
-                        if (BaggedSalad.Count() == 1)
+                        if (BaggedSalad.Count < 0)
                         {
-                            BaggedSaladPurchased = EachItem.CreatedUtc;
+                            // is this the right order here? CW and then break? Or vice versa?
+                            Console.WriteLine("This item has not been purchased by the user.");
+                            break;
+                        }
+                        BaggedSalad.Add(ProductName);
+                        if (BaggedSalad.Count() >= 0)
+                        {
+                            BaggedSaladPurchased.Add(EachItem.CreatedUtc);
+                            BaggedSaladCount++;                          
+                        }
+                        var FirstBaggedSaladDate = BaggedSaladPurchased.First();
+                        int TotalAmountOfDays = (today - FirstBaggedSaladDate).Days;
+                        int BaggedSaladAvgRange = TotalAmountOfDays / BaggedSaladCount;
+                        if (BaggedSaladAvgRange <= 10)
+                        {
+                            var LatestBaggedSaladDate = BaggedSaladPurchased.Last();
+                            if ((today - LatestBaggedSaladDate).Days >= 3 && (today - LatestBaggedSaladDate).Days <= 10)
+                            {
+                                SmartList.Add("Bagged salad");
+                            }
+                        }
+                        else if (BaggedSaladAvgRange <= 17)
+                        {
+                            string BaggedSaladTracking = "Every two weeks";
+                        }
+                        else if (BaggedSaladAvgRange <= 24)
+                        {
+                            string BaggedSaladTracking = "Every three weeks";
+                        }
+                        else if (BaggedSaladAvgRange <= 31)
+                        {
+                            string BaggedSaladTracking = "Monthly";
+                        }
+                        else if (BaggedSaladAvgRange >= 32)
+                        {
+                            string BaggedSaladTracking = "Not purchased regularly";
                         }
                         break;
                     case "cheerios":
@@ -144,7 +183,8 @@ namespace SmartGroceryList2._0.Services
                 }
             }
 
-            DateTimeOffset Today = new DateTimeOffset();
+            
+
 
             //foreach List compare CreatedUTCs
             var entity =
@@ -164,6 +204,7 @@ namespace SmartGroceryList2._0.Services
             }
         }
 
+        public CreateSmartList
         public IEnumerable<ShoppingListListItem> GetShoppingLists()
         {
             using (var ctx = new ApplicationDbContext())
