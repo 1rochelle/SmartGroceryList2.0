@@ -11,6 +11,10 @@ namespace SmartGroceryList2._0.Data
     {
         public int Id { get; set; }
 
+        public virtual ICollection<ShoppingList> CartItems { get; set; } = new List<ShoppingList>();
+
+        public Guid OwnerId { get; set; }
+
         [ForeignKey(nameof(Product))]
         public int? ProductId { get; set; }
         public virtual Product Product { get; set; }

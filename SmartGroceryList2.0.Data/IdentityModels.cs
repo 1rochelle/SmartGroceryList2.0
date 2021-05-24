@@ -41,6 +41,10 @@ namespace SmartGroceryList2._0.Data
 
         public DbSet<ShoppingList> ShoppingLists { get; set; }
 
+        public DbSet<Cart> Carts { get; set; }
+
+     //   public DbSet<ShoppingList> SmartList { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
            // modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
