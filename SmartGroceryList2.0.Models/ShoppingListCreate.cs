@@ -15,7 +15,7 @@ namespace SmartGroceryList2._0.Models
         public int Id { get; set; }
 
         [Required]
-        public int CustomerId { get; set; }
+        public int CartId { get; set; }
 
         [Required]
         public int ProductId { get; set; }

@@ -11,10 +11,9 @@ namespace SmartGroceryList2._0.Models
     {
         public int Id { get; set; }
 
-        public int? CustomerId { get; set; }
+        public int CartId { get; set; }
 
-        public int? ProductId { get; set; }
-        public virtual List<Product> Products { get; set; } = new List<Product>();
+        public int ProductId { get; set; }
 
     }
 }

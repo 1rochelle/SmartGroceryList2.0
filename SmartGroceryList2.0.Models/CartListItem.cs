@@ -8,8 +8,7 @@ namespace SmartGroceryList2._0.Models
 {
     public class CartListItem
     {
-        public int? ProductId { get; set; }
-
-        public int? CustomerId { get; set; }
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
     }
 }

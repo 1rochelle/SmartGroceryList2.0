@@ -16,12 +16,12 @@ namespace SmartGroceryList2._0.Data
         public Guid OwnerId { get; set; }
 
         [ForeignKey(nameof(Cart))]
-        public int? CartId { get; set; }
+        public int CartId { get; set; }
 
         public virtual Cart Cart  { get; set; }
 
         [ForeignKey(nameof(Product))]
-        public int? ProductId { get; set; }
+        public int ProductId { get; set; }
 
         public virtual Product Product { get; set; }
     }

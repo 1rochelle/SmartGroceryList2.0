@@ -23,7 +23,6 @@ namespace SmartGroceryList2._0.Services
                 new Cart()
                 {
                     OwnerId = _userId,
-                    ProductId = model.ProductId,
                     CustomerId = model.CustomerId
                 };
 
@@ -46,11 +45,60 @@ namespace SmartGroceryList2._0.Services
                             e =>
                                 new CartListItem
                                 {
-                                    CustomerId = e.CustomerId,
-                                    ProductId = e.ProductId
+                                    CustomerId = e.CustomerId
                                 }
                         );
                 return query.ToArray();
+            }
+        }
+
+        public CartDetail GetCartById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Carts
+                        .Single(e => e.Id == id && e.OwnerId == _userId);
+                return
+                    new CartDetail
+                    {
+                        Id = entity.Id,
+                        CustomerId = entity.CustomerId,
+                        CartItems = entity.CartItems
+                    };
+            }
+        }
+
+        public bool UpdateCart(CartEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Carts
+                        .Single(e => e.Id == model.Id && e.OwnerId == _userId);
+
+                entity.Id = model.Id;
+                entity.CustomerId = model.CustomerId;
+                entity.CartItems = model.CartItems;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteCart(int Id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Carts
+                        .Single(e => e.Id == Id && e.OwnerId == _userId);
+
+                ctx.Carts.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

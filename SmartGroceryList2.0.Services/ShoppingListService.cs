@@ -26,7 +26,7 @@ namespace SmartGroceryList2._0.Services
                 new ShoppingList()
                 {
                     OwnerId = _userId,
-                    CustomerId = model.CustomerId,
+                    CartId = model.CartId,
                     ProductId = model.ProductId
                 };
 
@@ -67,7 +67,7 @@ namespace SmartGroceryList2._0.Services
                             new ShoppingListListItem
                             {
                                 Id = e.Id,
-                                CustomerId = e.CustomerId,
+                                CartId = e.CartId,
                                 ProductId = e.ProductId
                             }
                        );
@@ -85,20 +85,12 @@ namespace SmartGroceryList2._0.Services
                         .ShoppingLists
                         .Single(e => e.Id == id && e.OwnerId == _userId);
 
-                var Customer = ctx.Customers.FirstOrDefault(x => x.CustomerId == entity.CustomerId);
-
-                foreach (var p in entity.Products)
-                {
-
-                }
-
                 return
                     new ShoppingListDetail
                     {
                         Id = entity.Id,
-                        CustomerId = entity.CustomerId,
-                        ProductId = entity.ProductId,
-                       //
+                        CartId = entity.CartId,
+                        ProductId = entity.ProductId                      
                     };
             }
         }
@@ -113,7 +105,7 @@ namespace SmartGroceryList2._0.Services
                         .Single(e => e.Id == model.Id && e.OwnerId == _userId);
 
                 entity.Id = model.Id;
-                entity.CustomerId = model.CustomerId;
+                entity.CartId = model.CartId;
                 entity.ProductId = model.ProductId;
 
                 return ctx.SaveChanges() == 1;

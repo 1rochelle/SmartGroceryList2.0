@@ -62,7 +62,7 @@ namespace SmartGroceryList2._0MVC.Controllers
                 new ShoppingListEdit
                 {
                     Id = detail.Id,
-                    CustomerId = detail.CustomerId,
+                    CartId = detail.CartId,
                     ProductId = detail.ProductId
                 };
             return View(model);
