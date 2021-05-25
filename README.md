@@ -5,7 +5,7 @@ TABLE OF CONTENTS N-tier architecture utilized to create a five-tier structure: 
 
 AGILE PLANNING (TRELLO BOARD LINK) https://trello.com/b/mDVQWlDh 
 
-Presentation Slide https://docs.google.com/presentation/d/1kVqDlwt2sGL6Jw_GtHdAw6SFml--Ty3MHOpP9P4t2Ws/edit?usp=sharing
+PRESENTATION SLIDES https://docs.google.com/presentation/d/1kVqDlwt2sGL6Jw_GtHdAw6SFml--Ty3MHOpP9P4t2Ws/edit?usp=sharing
 
 PLANNING DOCUMENTATION https://docs.google.com/document/d/1RyH_n4f0aZCkLiNF1bfjstkDhJ9TnoP9UWy2s-tt81g/edit?usp=sharing
 
