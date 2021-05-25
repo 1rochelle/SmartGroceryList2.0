@@ -7,6 +7,8 @@ Presentation Slide https://docs.google.com/presentation/d/1kVqDlwt2sGL6Jw_GtHdAw
 
 TABLE OF CONTENTS N-tier architecture utilized to create a five-tier structure: base tiers store and customer are linked to product tier, connected, by shopping list tier, to cart tier.
 
+PLANNING DOCUMENTATION https://docs.google.com/document/d/1RyH_n4f0aZCkLiNF1bfjstkDhJ9TnoP9UWy2s-tt81g/edit?usp=sharing
+
 INSTALLATION Download this project into Visual Studio 2019.
 
 USAGE Utilize Visual Studio 2019 for this project. 
