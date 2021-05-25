@@ -33,7 +33,5 @@ namespace SmartGroceryList2._0.Data
 
         [Required]
         public int StoreZIP { get; set; }
-
-        public List<Store> StoreNames { get; set; } = new List<Store>();
     }
 }

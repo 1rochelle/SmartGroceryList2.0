@@ -81,6 +81,10 @@
     <Compile Include="Migrations\202105251606525_SixthMigration.Designer.cs">
       <DependentUpon>202105251606525_SixthMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105251825352_SeventhMigration.cs" />
+    <Compile Include="Migrations\202105251825352_SeventhMigration.Designer.cs">
+      <DependentUpon>202105251825352_SeventhMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Cart.cs" />
     <Compile Include="ShoppingList.cs" />
@@ -115,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105251606525_SixthMigration.resx">
       <DependentUpon>202105251606525_SixthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105251825352_SeventhMigration.resx">
+      <DependentUpon>202105251825352_SeventhMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -35,8 +35,7 @@ namespace SmartGroceryList2._0.Models
         public StoreState StoreState { get; set; }
 
         [Required]
-        [MinLength(5, ErrorMessage = "Please enter at least 5 characters.")]
-        [MaxLength(5, ErrorMessage = "There are too many characters in this field.")]
+        [Range(5,5)]
         public int StoreZIP { get; set; }
     }
 }
