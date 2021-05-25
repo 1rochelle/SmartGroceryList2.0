@@ -5,7 +5,7 @@ AGILE PLANNING (TRELLO BOARD LINK) https://trello.com/b/mDVQWlDh
 
 Presentation Slide https://docs.google.com/presentation/d/1kVqDlwt2sGL6Jw_GtHdAw6SFml--Ty3MHOpP9P4t2Ws/edit?usp=sharing
 
-TABLE OF CONTENTS N-tier architecture utilized to create a five-tier structure: base tiers store and customer, then product tier, connected, by shopping list tier, to cart tier.
+TABLE OF CONTENTS N-tier architecture utilized to create a five-tier structure: base tiers store and customer are linked to product tier, connected, by shopping list tier, to cart tier.
 
 INSTALLATION Download this project into Visual Studio 2019.
 
