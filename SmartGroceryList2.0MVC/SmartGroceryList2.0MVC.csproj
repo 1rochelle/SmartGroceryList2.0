@@ -188,6 +188,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\bag.jpg" />
+    <Content Include="Content\Images\Groceries.jpg" />
+    <Content Include="Content\Images\groceries2.jpg" />
+    <Content Include="Content\Images\groceries3.jpg" />
+    <Content Include="Content\Images\groceries4.jpg" />
+    <Content Include="Content\Images\groceries5.jpg" />
+    <Content Include="Content\Images\other.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -205,6 +212,13 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Shared\Assets\gemma-stpjHJGqZyw-unsplash.jpg" />
+    <Content Include="Views\Shared\Assets\groceries.jpg" />
+    <Content Include="Views\Shared\Assets\groceries4.jpg" />
+    <Content Include="Views\Shared\Assets\maria-lin-kim-8RaUEd8zD-U-unsplash.jpg" />
+    <Content Include="Views\Shared\Assets\marisol-benitez-QvkAQTNj4zk-unsplash.jpg" />
+    <Content Include="Views\Shared\Assets\shirisha.png" />
+    <Content Include="Views\Shared\Assets\spiderelmo.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

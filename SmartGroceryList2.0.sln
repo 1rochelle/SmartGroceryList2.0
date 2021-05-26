@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGroceryList2.0.Models"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGroceryList2.0.Services", "SmartGroceryList2.0.Services\SmartGroceryList2.0.Services.csproj", "{4033DE4B-A740-4E9A-BFFF-F1BC3B86EB38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGroceryList2.0.Interfaces", "SmartGroceryList2.0.Interfaces\SmartGroceryList2.0.Interfaces.csproj", "{D7122E9F-FAF6-420E-B350-B8F472C69518}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4033DE4B-A740-4E9A-BFFF-F1BC3B86EB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4033DE4B-A740-4E9A-BFFF-F1BC3B86EB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4033DE4B-A740-4E9A-BFFF-F1BC3B86EB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7122E9F-FAF6-420E-B350-B8F472C69518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7122E9F-FAF6-420E-B350-B8F472C69518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7122E9F-FAF6-420E-B350-B8F472C69518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7122E9F-FAF6-420E-B350-B8F472C69518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
