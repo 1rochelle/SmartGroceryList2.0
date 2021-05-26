@@ -3,12 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Smart Shopping List</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        body {background-color: darkseagreen;}
+        img {padding: 0px; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;}
+        a {color: darkslateblue;}
+        div.container-fluid {width: 1170px; height: 500px;}
+    </style>
 
 </head>
 <body>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -17,11 +24,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Smart Shopping List", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Stores", "Index", "Store")</li>
@@ -37,11 +44,16 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+        <img src="~/Content/Images/bag.jpg" alt="groceries pic" />
+    </div>
     <div class="container body-content">
+            
         @RenderBody()
         <hr />
+
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Rochelle Deulley</p>
         </footer>
     </div>
 

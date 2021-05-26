@@ -1,4 +1,5 @@
 ﻿using SmartGroceryList2._0.Data;
+using SmartGroceryList2._0.Interfaces;
 using SmartGroceryList2._0.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SmartGroceryList2._0.Services
 {
-    public class CartService
+    public class CartService 
     {
         private readonly Guid _userId;
 

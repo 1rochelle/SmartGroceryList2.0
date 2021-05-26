@@ -88,7 +88,11 @@ sub {
   bottom: -0.25em;
 }
 img {
-  border: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 100%;
+    height: auto;
 }
 svg:not(:root) {
   overflow: hidden;
