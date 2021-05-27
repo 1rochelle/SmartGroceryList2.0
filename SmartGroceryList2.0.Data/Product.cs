@@ -54,11 +54,11 @@ namespace SmartGroceryList2._0.Data
 
         [Required]
         [ForeignKey(nameof(Store))]
-        public int StoreId { get; set; }
+        public int? StoreId { get; set; }
         public  Store Store { get; set; }
 
-        public virtual List<Customer> Customers { get; set; } = new List<Customer>();
 
-        public virtual List<ShoppingList> Carts { get; set; } = new List<ShoppingList>();
+
+       // public virtual List<ShoppingList> Carts { get; set; } = new List<ShoppingList>();
     }
 }

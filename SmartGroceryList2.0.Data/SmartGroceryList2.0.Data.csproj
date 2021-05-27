@@ -57,52 +57,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202105171538239_InitialMigration.cs" />
-    <Compile Include="Migrations\202105171538239_InitialMigration.Designer.cs">
-      <DependentUpon>202105171538239_InitialMigration.cs</DependentUpon>
+    <Compile Include="Cart.cs" />
+    <Compile Include="Migrations\202105271507004_init.cs" />
+    <Compile Include="Migrations\202105271507004_init.Designer.cs">
+      <DependentUpon>202105271507004_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105181424490_SecondMigration.cs" />
-    <Compile Include="Migrations\202105181424490_SecondMigration.Designer.cs">
-      <DependentUpon>202105181424490_SecondMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105192056046_ThirdMigration.cs" />
-    <Compile Include="Migrations\202105192056046_ThirdMigration.Designer.cs">
-      <DependentUpon>202105192056046_ThirdMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105192059115_FourthMigration.cs" />
-    <Compile Include="Migrations\202105192059115_FourthMigration.Designer.cs">
-      <DependentUpon>202105192059115_FourthMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105202143107_FifthMigration.cs" />
-    <Compile Include="Migrations\202105202143107_FifthMigration.Designer.cs">
-      <DependentUpon>202105202143107_FifthMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105251606525_SixthMigration.cs" />
-    <Compile Include="Migrations\202105251606525_SixthMigration.Designer.cs">
-      <DependentUpon>202105251606525_SixthMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105251825352_SeventhMigration.cs" />
-    <Compile Include="Migrations\202105251825352_SeventhMigration.Designer.cs">
-      <DependentUpon>202105251825352_SeventhMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105261802096_EighthMigration.cs" />
-    <Compile Include="Migrations\202105261802096_EighthMigration.Designer.cs">
-      <DependentUpon>202105261802096_EighthMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105261807231_NinthMigration.cs" />
-    <Compile Include="Migrations\202105261807231_NinthMigration.Designer.cs">
-      <DependentUpon>202105261807231_NinthMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105261817326_TenthMigration.cs" />
-    <Compile Include="Migrations\202105261817326_TenthMigration.Designer.cs">
-      <DependentUpon>202105261817326_TenthMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105262106229_EleventhMigration.cs" />
-    <Compile Include="Migrations\202105262106229_EleventhMigration.Designer.cs">
-      <DependentUpon>202105262106229_EleventhMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202105271535085_addedStoreIdToCustomerTable.cs" />
+    <Compile Include="Migrations\202105271535085_addedStoreIdToCustomerTable.Designer.cs">
+      <DependentUpon>202105271535085_addedStoreIdToCustomerTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Cart.cs" />
     <Compile Include="ShoppingList.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Enums\Quality.cs" />
@@ -118,38 +82,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105171538239_InitialMigration.resx">
-      <DependentUpon>202105171538239_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105271507004_init.resx">
+      <DependentUpon>202105271507004_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105181424490_SecondMigration.resx">
-      <DependentUpon>202105181424490_SecondMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105192056046_ThirdMigration.resx">
-      <DependentUpon>202105192056046_ThirdMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105192059115_FourthMigration.resx">
-      <DependentUpon>202105192059115_FourthMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105202143107_FifthMigration.resx">
-      <DependentUpon>202105202143107_FifthMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105251606525_SixthMigration.resx">
-      <DependentUpon>202105251606525_SixthMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105251825352_SeventhMigration.resx">
-      <DependentUpon>202105251825352_SeventhMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105261802096_EighthMigration.resx">
-      <DependentUpon>202105261802096_EighthMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105261807231_NinthMigration.resx">
-      <DependentUpon>202105261807231_NinthMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105261817326_TenthMigration.resx">
-      <DependentUpon>202105261817326_TenthMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105262106229_EleventhMigration.resx">
-      <DependentUpon>202105262106229_EleventhMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105271535085_addedStoreIdToCustomerTable.resx">
+      <DependentUpon>202105271535085_addedStoreIdToCustomerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

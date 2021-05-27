@@ -74,6 +74,7 @@ namespace SmartGroceryList2._0.Services
                     CustomerId = customer.CustomerId,
                     FirstName = customer.FirstName,
                     LastName = customer.LastName,
+                  //  StoreId = customer.StoreId,
                     PurchaseDate = customer.PurchaseDate
                 };
             }

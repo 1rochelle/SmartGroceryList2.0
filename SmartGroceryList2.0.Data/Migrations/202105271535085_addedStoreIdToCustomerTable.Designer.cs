@@ -7,13 +7,13 @@ namespace SmartGroceryList2._0.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class FourthMigration : IMigrationMetadata
+    public sealed partial class addedStoreIdToCustomerTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FourthMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedStoreIdToCustomerTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105192059115_FourthMigration"; }
+            get { return "202105271535085_addedStoreIdToCustomerTable"; }
         }
         
         string IMigrationMetadata.Source

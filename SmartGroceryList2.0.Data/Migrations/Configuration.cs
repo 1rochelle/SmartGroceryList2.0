@@ -13,7 +13,6 @@ namespace SmartGroceryList2._0.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            
         }
 
         protected override void Seed(SmartGroceryList2._0.Data.ApplicationDbContext context)
@@ -30,9 +29,11 @@ namespace SmartGroceryList2._0.Data.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
             string content = File.ReadAllText(@"C:\Users\rdeulley\source\repos\SmartGroceryList2.0\SmartGroceryList2.0.Data\JSONobj\Products.json");
             List<Product> Products = JsonConvert.DeserializeObject<List<Product>>(content);
             context.Products.AddOrUpdate(p => p.Id, Products.ToArray());
+
         }
     }
 }

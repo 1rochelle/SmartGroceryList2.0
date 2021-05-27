@@ -3,7 +3,7 @@ namespace SmartGroceryList2._0.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -15,25 +15,9 @@ namespace SmartGroceryList2._0.Data.Migrations
                         FirstName = c.String(),
                         LastName = c.String(),
                         OwnerId = c.Guid(nullable: false),
-                        ProductId = c.Int(nullable: false),
+                        PurchaseDate = c.DateTimeOffset(nullable: false, precision: 7),
                     })
-                .PrimaryKey(t => t.CustomerId)
-                .ForeignKey("dbo.Product", t => t.ProductId, cascadeDelete: true)
-                .Index(t => t.ProductId);
-            
-            CreateTable(
-                "dbo.ShoppingList",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        CustomerId = c.Int(),
-                        ProductId = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Customer", t => t.CustomerId)
-                .ForeignKey("dbo.Product", t => t.ProductId)
-                .Index(t => t.CustomerId)
-                .Index(t => t.ProductId);
+                .PrimaryKey(t => t.CustomerId);
             
             CreateTable(
                 "dbo.Product",
@@ -41,20 +25,25 @@ namespace SmartGroceryList2._0.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         DepartmentType = c.Int(nullable: false),
-                        ItemId = c.Guid(nullable: false),
+                        OwnerId = c.Guid(nullable: false),
                         ItemName = c.String(nullable: false, maxLength: 20),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         ItemCount = c.Int(nullable: false),
+                        TimesPurchased = c.Int(nullable: false),
                         PurchasedAtMultipleStores = c.Boolean(nullable: false),
                         ItemType = c.Int(nullable: false),
                         StoreId = c.Int(nullable: false),
                         ItemIsCarriedByStore = c.Boolean(nullable: false),
                         ItemIsOutOfStock = c.Boolean(nullable: false),
                         QualityType = c.Int(nullable: false),
+                        Customer_CustomerId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Store", t => t.StoreId, cascadeDelete: true)
-                .Index(t => t.StoreId);
+                .ForeignKey("dbo.Customer", t => t.Customer_CustomerId)
+                .Index(t => t.StoreId)
+                .Index(t => t.Customer_CustomerId);
             
             CreateTable(
                 "dbo.Store",
@@ -63,16 +52,13 @@ namespace SmartGroceryList2._0.Data.Migrations
                         StoreId = c.Int(nullable: false, identity: true),
                         OwnerId = c.Guid(nullable: false),
                         StoreName = c.String(nullable: false, maxLength: 20),
-                        StoreAddressNumber = c.Int(nullable: false),
+                        StoreAddressNumber = c.String(nullable: false),
                         StoreStreetName = c.String(nullable: false),
                         StoreTownOrCity = c.String(nullable: false),
                         StoreState = c.Int(nullable: false),
                         StoreZIP = c.Int(nullable: false),
-                        Store_StoreId = c.Int(),
                     })
-                .PrimaryKey(t => t.StoreId)
-                .ForeignKey("dbo.Store", t => t.Store_StoreId)
-                .Index(t => t.Store_StoreId);
+                .PrimaryKey(t => t.StoreId);
             
             CreateTable(
                 "dbo.IdentityRole",
@@ -153,20 +139,14 @@ namespace SmartGroceryList2._0.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.Customer", "ProductId", "dbo.Product");
-            DropForeignKey("dbo.ShoppingList", "ProductId", "dbo.Product");
+            DropForeignKey("dbo.Product", "Customer_CustomerId", "dbo.Customer");
             DropForeignKey("dbo.Product", "StoreId", "dbo.Store");
-            DropForeignKey("dbo.Store", "Store_StoreId", "dbo.Store");
-            DropForeignKey("dbo.ShoppingList", "CustomerId", "dbo.Customer");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropIndex("dbo.Store", new[] { "Store_StoreId" });
+            DropIndex("dbo.Product", new[] { "Customer_CustomerId" });
             DropIndex("dbo.Product", new[] { "StoreId" });
-            DropIndex("dbo.ShoppingList", new[] { "ProductId" });
-            DropIndex("dbo.ShoppingList", new[] { "CustomerId" });
-            DropIndex("dbo.Customer", new[] { "ProductId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
@@ -174,7 +154,6 @@ namespace SmartGroceryList2._0.Data.Migrations
             DropTable("dbo.IdentityRole");
             DropTable("dbo.Store");
             DropTable("dbo.Product");
-            DropTable("dbo.ShoppingList");
             DropTable("dbo.Customer");
         }
     }

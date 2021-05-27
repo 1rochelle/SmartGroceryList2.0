@@ -102,6 +102,7 @@ namespace SmartGroceryList2._0.Services
                     ItemType = product.ItemType,
                     CreatedUtc = product.CreatedUtc,
                     StoreId = product.StoreId,
+                    StoreName = ctx.Stores.FirstOrDefault(x => x.StoreId == product.StoreId).StoreName,
                     PurchasedAtMultipleStores = product.PurchasedAtMultipleStores,
                     ItemCount = product.ItemCount
                 };
