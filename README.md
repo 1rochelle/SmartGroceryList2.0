@@ -1,5 +1,5 @@
 # SmartGroceryList2.0
-DESCRIPTION This grocery list writes itself. Utilizing n-tier architecture, this MVC project analyzes user data to generate a list of items the user needs to purchase based on their purchasing history. (Note: smart list capability has not yet been coded.)
+DESCRIPTION This grocery list writes itself. Utilizing n-tier architecture, this MVC project analyzes user data to generate a list of items the user needs to purchase based on their purchasing history. (Update 6/15/21: smart list capability has been commented out, and entire sections removed. A major design flaw was discovered towards the end of this class assignment, so the project was modified to meet the requirements and deadline. The developer plans to go back and rebuild this project after getting more experience creating other n-tier projects. An internal company polling app is currently being developed. Developer will re-evaluate skill level after this group project is completed.)
 
 TABLE OF CONTENTS N-tier architecture utilized to create a five-tier structure: base tiers store and customer are linked to product tier, connected, by shopping list tier, to cart tier.
 
